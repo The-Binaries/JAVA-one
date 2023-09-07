@@ -70,7 +70,7 @@ public class Account {
     // toString method
     @Override
     public String toString() {
-        return "Account [custID=" + custID + ", custName=" + custName + ", custAddress=" + custAddress
-                + ", custPhone=" + custPhone + ", balance=" + balance + "]";
+        return "Account:"+"\n custID:\t" + custID + "\n custName:\t" + custName + "\n custAddress:\t" + custAddress
+                + "\n custPhone:\t" + custPhone + "\n balance:\t" + balance;
     }
 }
