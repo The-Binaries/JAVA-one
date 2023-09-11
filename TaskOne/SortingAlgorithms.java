@@ -3,7 +3,6 @@ import java.util.Random;
 public class SortingAlgorithms {
     public static void main(String[] args) {
         int[] sizes = {100, 1000, 5000, 10000}; // Add more sizes if needed
-        System.out.println("Array Size\tBubble Sort (ns)\tSelection Sort (ns)\tInsertion Sort (ns)\n");
 
         for (int size : sizes) {
             int[] randomArray = generateRandomArray(size);
