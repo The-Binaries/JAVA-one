@@ -1,11 +1,15 @@
 public class SortingAlgorithmsTest {
     public static void main(String[] args) {
         testBubbleSort();
-        // You can add similar calls to test other sorting algorithms here
+        testSelectionSort();
+        testInsertionSort();
     }
 
+    // Sample unsorted array
+    private static int[] unsortedArrayInitial = {5, 2, 9, 1, 5};
+
     public static void testBubbleSort() {
-        int[] unsortedArray = {5, 2, 9, 1, 5}; // Sample unsorted array
+        int[] unsortedArray = unsortedArrayInitial.clone();
 
         System.out.println("Unsorted Array:");
         printArray(unsortedArray);
@@ -19,6 +23,42 @@ public class SortingAlgorithmsTest {
             System.out.println("Bubble Sort Test Passed!");
         } else {
             System.out.println("Bubble Sort Test Failed!");
+        }
+    }
+
+    public static void testSelectionSort() {
+        int[] unsortedArray = unsortedArrayInitial.clone();
+
+        System.out.println("Unsorted Array:");
+        printArray(unsortedArray);
+
+        SortingAlgorithms.selectionSort(unsortedArray);
+
+        System.out.println("Sorted Array using Selection Sort:");
+        printArray(unsortedArray);
+
+        if (isSorted(unsortedArray)) {
+            System.out.println("Selection Sort Test Passed!");
+        } else {
+            System.out.println("Selection Sort Test Failed!");
+        }
+    }
+
+    public static void testInsertionSort() {
+        int[] unsortedArray = unsortedArrayInitial.clone();
+
+        System.out.println("Unsorted Array:");
+        printArray(unsortedArray);
+
+        SortingAlgorithms.insertionSort(unsortedArray);
+
+        System.out.println("Sorted Array using Insertion Sort:");
+        printArray(unsortedArray);
+
+        if (isSorted(unsortedArray)) {
+            System.out.println("Insertion Sort Test Passed!");
+        } else {
+            System.out.println("Insertion Sort Test Failed!");
         }
     }
 
